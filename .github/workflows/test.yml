@@ -1,9 +1,15 @@
-on: [push]
 name: deploy
+
+on:
+  push:
+    branches:
+      - 'main'
+
 jobs:
-  deploy:
-    name: deploy to cluster
+  docker:
+    name: deploy to DockerHub
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2
