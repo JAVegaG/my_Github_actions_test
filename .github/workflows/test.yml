@@ -17,6 +17,4 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tag_with_ref: true
-        tag_with_sha: true
-        tags: ${{ github.sha }}
+        tags: user/app:latest
